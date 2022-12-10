@@ -1,0 +1,46 @@
+.sendForm {
+    display: grid;
+    grid-template-areas:
+                    "a b"
+;
+    grid-template-columns: 976px 164px;
+
+    align-items: center;
+    margin: 50px 50px 0px;
+
+}
+
+.textarea {
+    grid-area: a;
+    background: #F5F7FB;
+    box-shadow: 0px 5px 20px rgba(29, 33, 38, 0.03), 0px 1px 2px rgba(29, 33, 38, 0.1);
+    border-radius: 20px;
+    width: 976px;
+    height: 40px;
+    padding: 5px 30px 5px;
+    margin: 0px;
+
+}
+
+.button {
+    rid-area: b;
+    background: #0066CC;
+    border-radius: 20px;
+    width: 120px;
+    height: 40px;
+    padding: 0px;
+    margin-left: 40px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+
+.button:hover {
+
+}
+.button:active {
+
+}

@@ -1,0 +1,79 @@
+.friendMessage {
+
+}
+
+.friendImageAndText {
+    display: grid;
+    grid-template-areas:
+                    "i n"
+                    "i m"
+                    "t t";
+
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 50px 310px;
+    margin: 0px 635px 0px 50px;
+
+
+}
+
+.friendImageAndText img {
+    grid-area: i;
+    width: 48px;
+    height: 48px;
+    margin-top: 7px;
+
+}
+
+.friendText {
+    background: #F5F7FB;
+    box-shadow: 0px 5px 20px rgba(29, 33, 38, 0.03), 0px 1px 2px rgba(29, 33, 38, 0.1);
+    border-radius: 5px;
+    margin: 0px 5px;
+    padding: 5px;
+
+}
+
+.friendText:after {
+
+}
+
+.friendName {
+    grid-area: n;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    /*margin-left: 410px;*/
+
+}
+
+.friendMessageText {
+    grid-area: m;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+    /*margin-left: 10px;*/
+
+
+    color: #000000;
+
+}
+
+.friendTime {
+    grid-area: t;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+
+    color: #000000;
+    padding: 0px;
+    margin-left: 60px ;
+
+}
