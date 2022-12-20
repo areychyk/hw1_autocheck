@@ -13,19 +13,19 @@ beforeEach(() => {
     ]
 })
 
-test('filter by all', () => {
+test('test 1 filter by all', () => {
     const newState = filterAffairs(initialState, 'all')
     expect(newState.length).toBe(5)
 })
-test('filter by high', () => {
+test('test 2filter by high', () => {
     const newState = filterAffairs(initialState, 'high')
     expect(newState.length).toBe(2)
 })
-test('filter by middle', () => {
+test('test 3 filter by middle', () => {
     const newState = filterAffairs(initialState, 'middle')
     expect(newState.length).toBe(1)
 })
-test('filter by low', () => {
+test('test 4 filter by low', () => {
     const newState = filterAffairs(initialState, 'low')
     expect(newState.length).toBe(2)
 })
