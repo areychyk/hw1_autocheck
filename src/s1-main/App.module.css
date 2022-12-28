@@ -3,11 +3,12 @@
 }
 
 .hw {
-    width: 1280px;
+   max-width: 1280px;
 
 }
 
 .hwTitle {
+    width: 1280px;
 
 }
 
