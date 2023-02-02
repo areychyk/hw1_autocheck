@@ -32,7 +32,7 @@ const SuperButton: React.FC<SuperButtonPropsType> = (
 
 
 
-    console.log(finalClassName)
+    // console.log(finalClassName)
     return (
         <button
             disabled={disabled}
