@@ -7,9 +7,13 @@ import {useSearchParams} from 'react-router-dom'
 import SuperSort from './common/c10-SuperSort/SuperSort'
 
 /*
-* 1 - дописать SuperPagination
-* 2 - дописать SuperSort
-* 3 - проверить pureChange тестами
+* 1 - дописать SuperPagination ++
+*
+* 2 - дописать SuperSort+-
+*
+*
+* 3 - проверить pureChange тестами+
+*
 * 3 - дописать sendQuery, onChangePagination, onChangeSort в HW15
 * 4 - сделать стили в соответствии с дизайном
 * 5 - добавить HW15 в HW5/pages/JuniorPlus
@@ -40,11 +44,19 @@ const HW15 = () => {
     const [totalCount, setTotalCount] = useState(100)
     const [searchParams, setSearchParams] = useSearchParams()
     const [techs, setTechs] = useState<TechType[]>([])
+    console.log(searchParams)
 
     const sendQuery = (params: any) => {
         setLoading(true)
         getTechs(params)
             .then((res) => {
+                if(res){
+
+                    setTechs(res.data.techs)
+                    setTotalCount(res.data.totalCount)
+                    setLoading(false)
+                }
+
                 // делает студент
 
                 // сохранить пришедшие данные
@@ -56,25 +68,28 @@ const HW15 = () => {
     const onChangePagination = (newPage: number, newCount: number) => {
         // делает студент
 
-        // setPage(
-        // setCount(
+        setPage(newPage)
+        setCount(newCount)
 
-        // sendQuery(
-        // setSearchParams(
+        sendQuery({sort, page:newPage, count:newCount})
+        setSearchParams({params:sort})
 
         //
+        setLoading(false)
     }
 
     const onChangeSort = (newSort: string) => {
         // делает студент
 
-        // setSort(
-        // setPage(1) // при сортировке сбрасывать на 1 страницу
+        setSort(newSort)
+        setPage(1) // при сортировке сбрасывать на 1 страницу
 
-        // sendQuery(
-        // setSearchParams(
+        sendQuery({sort: newSort,page, count})
+
+        setSearchParams({params: newSort})
 
         //
+        setLoading(false)
     }
 
     useEffect(() => {
